@@ -1,0 +1,158 @@
+/* ===== BASE ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: #212529;
+  overflow-x: hidden; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ===== HERO SECTION (FLEXBOX) ===== */
+.hero {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 3rem 1.5rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;    
+    text-align: left;
+    padding: 4rem 3rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2.75rem;
+  }
+}
+
+
+/* ===== CATÁLOGO DE CURSOS (CSS GRID) ===== */
+.courses {
+  padding: 3rem 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.courses-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: 1fr;   
+  gap: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  .course-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+.course-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+.course-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0;
+}
+
+
+/* ===== NOTICIAS Y EVENTOS (BOOTSTRAP + AJUSTES) ===== */
+.news {
+  background-color: #fff;
+}
+
+.news h2 {
+  font-weight: 700;
+}
+
+.news-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+}
+
+.news-card .card-img-top {
+  height: 200px;
+  object-fit: cover;   
+}
+
+.news-card .card-title {
+  font-weight: 600;
+}
+
+.news-card .card-text {
+  color: #555;
+}
