@@ -1,0 +1,46 @@
+/* styles.css - Gestor de Tareas Universitarias */
+:root {
+  --color-principal: #0d9488;
+  --color-principal-oscuro: #0f766e;
+  --color-principal-rgb: 13, 148, 136;
+  --bs-primary: var(--color-principal);
+  --bs-primary-rgb: var(--color-principal-rgb);
+}
+
+.btn-primary {
+  --bs-btn-bg: var(--color-principal);
+  --bs-btn-border-color: var(--color-principal);
+  --bs-btn-hover-bg: var(--color-principal-oscuro);
+  --bs-btn-hover-border-color: var(--color-principal-oscuro);
+  --bs-btn-active-bg: var(--color-principal-oscuro);
+  --bs-btn-active-border-color: var(--color-principal-oscuro);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--color-principal);
+  --bs-btn-border-color: var(--color-principal);
+  --bs-btn-hover-bg: var(--color-principal);
+  --bs-btn-hover-border-color: var(--color-principal);
+  --bs-btn-active-bg: var(--color-principal);
+  --bs-btn-active-border-color: var(--color-principal);
+}
+
+#lista-tareas .list-group-item:hover {
+  background-color: var(--bs-light);
+}
+
+#lista-tareas .form-check-input {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+#lista-tareas strong {
+  word-break: break-word;
+}
+
+@media (max-width: 576px) {
+  #lista-tareas .list-group-item { flex-wrap: wrap; }
+  #lista-tareas .btn-sm { width: 100%; }
+}
